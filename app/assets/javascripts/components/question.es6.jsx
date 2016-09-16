@@ -11,7 +11,7 @@ class Question extends React.Component {
     let shouldToggleDetails = !this.state.toggleDetails;
     this.setState({toggleDetails: shouldToggleDetails})
     if(shouldToggleDetails)
-    this.fetchDetails();
+      this.fetchDetails();
   }
 
   fetchDetails(){
@@ -27,14 +27,6 @@ class Question extends React.Component {
     }.bind(this))
   }
 
-  showDetails(){
-    let details = this.state.details
-    if(this.toggleDetails) {
-      return details
-    }
-    return null;
-  }
-
   render(){
     // debugger
       let question = this.props.data
@@ -43,14 +35,11 @@ class Question extends React.Component {
           <h2>{question.title}</h2>
           <p>Asked by {question.user.username}</p>
           <p>Question: {question.body}</p>
-
-          {this.state.details !== null ?
-            <Answers data={this.showDetails()}/>
+          {this.state.toggleDetails !== false && this.state.details !== null?
+            <Answers data={this.state.details}/>
           :
-            null
+            console.log("in render answers conditional")
           }
-
-
         </li>
         )
   }

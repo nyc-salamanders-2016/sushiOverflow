@@ -1,8 +1,7 @@
 class Answers extends React.Component {
 
   render(){
-          // console.log(this.state.answers)  // why does this print twice?
-        // debugger
+
     return(
 
         <div>
