@@ -10,7 +10,6 @@ Rails.application.routes.draw do
 
 
   # resources :votes
-  #
   # resources :comments
   # resources :answers
   # resources :questions

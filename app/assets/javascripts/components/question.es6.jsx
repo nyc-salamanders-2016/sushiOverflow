@@ -1,10 +1,10 @@
 class Question extends React.Component {
+
   constructor(){
     super();
     this.state = {details: null, toggleDetails: false}
-    this.toggleDetails = this.toggleDetails.bind(this);
+    this.toggleDetails = this.toggleDetails.bind(this)
     this.fetchDetails = this.fetchDetails.bind(this)
-    this.showDetails = this.showDetails.bind(this)
   }
 
   toggleDetails(){
@@ -20,15 +20,12 @@ class Question extends React.Component {
       url: '/questions/details/?question=' + questionInfo.id + '',
       method: 'GET'
     })
-    // debugger
     .done((response) => {
-      // debugger
       this.setState({details: response})
     }.bind(this))
   }
 
   render(){
-    // debugger
       let question = this.props.data
       return(
         <li onClick={this.toggleDetails} >

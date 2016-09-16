@@ -1,9 +1,7 @@
 class Answers extends React.Component {
 
   render(){
-
     return(
-
         <div>
           <h3>Answers</h3>
           <ul>

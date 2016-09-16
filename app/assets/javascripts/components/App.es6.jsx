@@ -1,4 +1,5 @@
 class App extends React.Component {
+
   constructor(){
     super()
     this.state = {
@@ -6,16 +7,11 @@ class App extends React.Component {
     }
   }
 
-
   render(){
     return(
         <div>
           <h1>SushiOverflow</h1>
-
-
             <Questions />
-
-
         </div>
     )
   }

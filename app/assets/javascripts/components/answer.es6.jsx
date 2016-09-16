@@ -1,5 +1,5 @@
 class Answer extends React.Component {
-
+  
   render(){
       let answer = this.props.data
       return(
