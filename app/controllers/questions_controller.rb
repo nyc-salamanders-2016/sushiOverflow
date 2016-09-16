@@ -10,7 +10,8 @@ class QuestionsController < ApplicationController
 
   def details
     # add conditional to check if question exists
-    details = Question.find(params[:question]).answers # use jbuilder to add comments
+    details = Question.find(params[:question]).answers.to_json(include: {:user => {only:[:username]}})
+    # use jbuilder to add comments
     render json: details
   end
 
